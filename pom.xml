@@ -10,6 +10,9 @@
     <modules>
         <module>demo1provider8001</module>
         <module>demo1consume80</module>
+        <module>demo2-consumereureka80</module>
+        <module>demo2-providereureka8001</module>
+        <module>demo2-eureka-registy</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -1,0 +1,10 @@
+server:
+  port: 80
+spring:
+  application:
+    name: demo2-consumer
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+#    这个地址是在eureka的application.yml中定义过的
+      defaultZone: http://localhost:7001/eureka
