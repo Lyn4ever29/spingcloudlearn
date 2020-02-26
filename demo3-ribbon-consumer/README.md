@@ -170,13 +170,11 @@ public class Demo3RibbonProvider_8001 {
 
 ![](https://gitee.com/lyn4ever/picgo-img/raw/master/img/20200227013628.png)
 
-
-
-![image-20200227013647098](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200227013647098.png)
+![](https://gitee.com/lyn4ever/picgo-img/raw/master/img/20200227014455.png)
 
 从上边结果可以看出来，三次连续访问竟然结果不一样，这就是ribbon启动的负载均衡算法了啊。至于为什么是这样？
 
 ##	Ribbon内置的负载均衡算法
 
-Ribbon默认使用的是轮询算法，即对相同的服务提供者进行挨个轮询，这样，就能会让每一个服务提供者都被访问一次了，内置算法还在以下几个：
+Ribbon默认使用的是轮询算法，即对相同的服务提供者进行挨个轮询，这样，就能会让每一个服务提供者都被访问一次了。当然，Ribbon的负载均衡算法还支持自定义，下期再说喽！
 
