@@ -16,6 +16,10 @@
         <module>eureka-cluster-7001</module>
         <module>eureka-cluster-7002</module>
         <module>eureka-cluster-7003</module>
+        <module>demo3-ribbon-consumer</module>
+        <module>demo3-ribbon-provider-8001</module>
+        <module>demo3-ribbon-provider-8002</module>
+        <module>demo3-ribbon-provider-8003</module>
     </modules>
     <packaging>pom</packaging>
 
