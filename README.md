@@ -9,3 +9,7 @@
 [Eureka集群搭建](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/eureka-cluster-7001)
 
 [集成Ribbon负载均衡-demo3](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo3-ribbon-consumer)
+
+##  请关注我的公众号
+每天更新SpringCloud知识
+![](https://lyn4ever.gitee.io/img/wx/gzh2.png)
