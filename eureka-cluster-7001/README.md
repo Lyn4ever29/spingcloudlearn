@@ -98,4 +98,4 @@ eureka:
 
  改完之后，然后启动这个提供者项目 ，就可以在eureka集群的任意一个项目中看到这个服务了
 
-![image-20200226235810581](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200226235810581.png)
+![](https://gitee.com/lyn4ever/picgo-img/raw/master/img/20200227021029.png)

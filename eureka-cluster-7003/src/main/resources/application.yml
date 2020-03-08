@@ -11,6 +11,6 @@ eureka:
 #    单个eureka
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址。
 # euraka集群
-      defaultZone: http://eureka1:7002/eureka/,http://eureka2:7001/eureka/
+      defaultZone: http://eureka1:7001/eureka/,http://eureka2:7002/eureka/
 
 

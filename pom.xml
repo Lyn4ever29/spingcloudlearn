@@ -20,6 +20,8 @@
         <module>demo3-ribbon-provider-8001</module>
         <module>demo3-ribbon-provider-8002</module>
         <module>demo3-ribbon-provider-8003</module>
+        <module>demo4-feign-interface</module>
+        <module>demo4-feign-consumer</module>
     </modules>
     <packaging>pom</packaging>
 
