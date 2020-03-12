@@ -2,18 +2,60 @@
 
 ##	SpringCloud学习笔记
 
-[首个SpringCloud应用创建及基本原理分析-demo1](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo1provider8001)
+本项目地址主要是学习Sping Netflix 相关组件，使用的SpringBoot与SpringCloud的版本如下：
 
-[注册中心Eureka入门学习-demo2](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo2-eureka-registy)
+```xml
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-dependencies</artifactId>
+    <!--springcloud的版本号就是这么奇怪-->
+    <version>Dalston.SR1</version>
+    <type>pom</type>
+    <scope>import</scope>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <version>1.5.9.RELEASE</version>
+    <type>pom</type>
+    <scope>import</scope>
+</dependency>
+```
 
-[Eureka集群搭建](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/eureka-cluster-7001)
+关于SpringCloud Alibaba的相关组件学习，请敬请期待！！！
 
-[集成Ribbon负载均衡-demo3](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo3-ribbon-consumer)
+##### 入门理论
 
-[使用Feign作为客户端进行服务的访问](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo4-feign-consumer)
+* [首个SpringCloud应用创建及基本原理分析-demo1](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo1provider8001)
 
-[Eureka停更？试下Zookeeper和Consul吧!](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/zookeeper-provider-8001)
+##### 注册中心
 
-##  请关注我的公众号
-每天更新SpringCloud知识
+* [注册中心Eureka入门学习-demo2](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo2-eureka-registy)
+
+* [Eureka集群搭建](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/eureka-cluster-7001)
+
+* [Eureka停更？试下Zookeeper和Consul吧!](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/zookeeper-provider-8001)
+
+##### 负载均衡
+
+* [集成Ribbon负载均衡-demo3](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo3-ribbon-consumer)
+
+* [使用Feign作为客户端进行服务的访问](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo4-feign-consumer)
+
+
+
+## 学习方法？
+
+> ​	这么多的项目，不知道哪个是哪个？不用关键，往下看。
+
+1. git clone或下载本项目到本地，然后使用IDEA导入要本项目
+
+```git clone https://github.com/Lyn4ever29/spingcloudlearn.git```
+
+2. 点击上边的每一个链接查看对应的项目页面的README.md文件
+3. 在文档最上边有一个本教程涉及的项目列表。
+4. 查看对应的教程时，可以快速地找到对应的项目。
+
+##  更多的教程？
+关注“小鱼与Java”微信公众号，回复"SpringCloud"获取
 ![](https://lyn4ever.gitee.io/img/wx/gzh2.png)

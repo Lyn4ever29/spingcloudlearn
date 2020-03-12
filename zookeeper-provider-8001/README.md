@@ -1,12 +1,19 @@
 ###	Eureka停更了？试试Zookpper和Consul
 
-在Spring Cloud Netflix中使用Eureak作为注册中心，但是Eureka2.0停止更新，Eureka1.0 进入了维护状态。就像win7一样，同样可以用，但是官方对于新出现的问题并不能及时修复，所以我们就需要使用替代品。目前可用的注册中心替代品主要有：Zookeeper、Consul、Nacos等，这里主要讲前两个，Nacos是Spring Cloud Alilibaba中的组件，后期会说到。
+* 本教程所涉及的项目包括
+
+| 项目名称                | 项目说明                                |
+| ----------------------- | --------------------------------------- |
+| zookeeper-consumer-80   | 使用Zookeeper作为注册中心时的**消费者** |
+| zookeeper-provider-8001 | 使用Zookeeper作为注册中心时的**提供者** |
+| consul-consumer-80      | 使用Consul作为注册中心时的**消费者**    |
+| consul-provider-8001    | 使用Consul作为注册中心时的**提供者**    |
 
 ### 使用Zookeeper作为注册中心
 
 ####	一、安装Zookeeper并启动服务
 
-> ​	具体可参照
+> ​	这一步非本文重点，请自行百度，很简单的
 
 #### 二、将原有的微服务注册进Zookeeper
 
@@ -125,13 +132,17 @@ Consul是使用go语言开发，是一个服务网格（微服务间的 TCP/IP�
 
 这个安装要比Zookeeper简单，我只说下windows安装操作，其他的查看官网[https://www.consul.io/](https://www.consul.io/)
 
-* 在官网上下载安装包，windows的下载解压后就是一个.exe文件。使用cmd打开当前目录（在当前目录下按住Shift+鼠标右键，选择Open commond window here）然后运行如下命令：
+> ​	如果你下载很慢的话，我在项目代码中上传了这个安装包。看文未获取代码地址。
+
+* 在官网上下载安装包，windows的下载解压后就是一个.exe文件。使用cmd打开当前目录（在当前目录下按住Shift+鼠标右键，选择Open commond window here 或者在地址栏中输入cmd然后回车）然后运行如下命令：
 
 ```shell
 consul agent -dev
 ```
 
-* Consul和Eureka是有图形化界面的，启动Consul后直接用浏览器打开```localhost:8500```就可以看到
+* Consul和Eureka是有图形化界面的，启动Consul后直接用浏览器打开```localhost:8500```就可以看到。
+
+  ![使用Consul作为注册中心](https://gitee.com/lyn4ever/picgo-img/raw/master/img/20200312232819.png)
 
 #### 二、将原有微服务注册进Consul
 
@@ -191,8 +202,38 @@ public class ApplicationDemo {
 ```
 
 * 然后启动这个项目，先在浏览器中输入```localhost:8500```看一下我们的注册中心是否有这两个微服务。然后再次进行测试。
+* 但是我们启动后，在Consul后台发现我们服务是注册进去了，但是报错了。这是因为Consul和其他的注册中心不一样，它要检查这个SpringBoot的健康值，就是要访问每个服务的"/health"接口。所以我们要在每一个微服务中引入SpringBoot的健康检查的依赖（之前用过这个的小伙伴就很熟悉了）
 
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+```
 
+* 这里有一个小插曲，就算当我们引入这个包后我们的```http://localhost:8001/health```返回还是down，也就是说我们的健康检查还是不通过.。因为我们使用的SpringBoot和Spring Cloud版本的问题。我还没找到解决方案。但是我们可以关闭Consul对当前服务的健康检查，添加如下配置：
+
+```yaml
+spring:
+  application:
+#  这个应用的名称，用来注册在注册中心的名称
+    name: consul-consumer
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+#      这个就是要注册进consul中的服务名，直接使用了上边定义的微服务名
+        service-name: ${spring.application.name}
+#        取消Consule对当前服务的健康检查
+        register-health-check: false
+```
+
+最后，能在Consul控制台看到这个
+
+![使用Consul作为注册中心](https://gitee.com/lyn4ever/picgo-img/raw/master/img/20200313001910.png)
+
+上边这个错误标志忽略就好了。然后我们就可以使用浏览器和之前一样进行服务的访问了
 
 ### 总结：
 
@@ -202,3 +243,9 @@ public class ApplicationDemo {
 
 2. 和Eureka不同就是，在注册中心能同时看到提供者和消费者
 3. 后期在Spring Cloud Alilibaba中，我们会使用Nacos（阿里自研的）作为注册中心
+
+### 项目代码及更多学习教程
+
+请关注微信公众号，回复“SpringCloud”获取。
+
+![](https://lyn4ever.gitee.io/img/wx/gzh2.png)
