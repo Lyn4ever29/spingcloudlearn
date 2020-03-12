@@ -10,8 +10,8 @@
     <modules>
         <module>demo1provider8001</module>
         <module>demo1consume80</module>
-        <module>demo2-consumereureka80</module>
-        <module>demo2-providereureka8001</module>
+        <module>demo2-consumer-eureka-80</module>
+        <module>demo2-provider-eureka-8001</module>
         <module>demo2-eureka-registy</module>
         <module>eureka-cluster-7001</module>
         <module>eureka-cluster-7002</module>
@@ -22,6 +22,10 @@
         <module>demo3-ribbon-provider-8003</module>
         <module>demo4-feign-interface</module>
         <module>demo4-feign-consumer</module>
+        <module>zookeeper-consumer-80</module>
+        <module>zookeeper-provider-8001</module>
+        <module>consul-comsumer-80</module>
+        <module>consul-provider-8001</module>
     </modules>
     <packaging>pom</packaging>
 

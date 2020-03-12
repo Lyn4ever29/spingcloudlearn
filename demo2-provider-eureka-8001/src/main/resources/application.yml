@@ -1,0 +1,19 @@
+server:
+  port: 8001
+
+spring:
+  application:
+#  这个应用的名称，用来注册在注册中心的名称
+    name: demo2-provider
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+#    这个地址是在eureka的application.yml中定义过的
+#     单个eureka项目的的注册地址
+#      defaultZone: http://localhost:7001/eureka
+#       eureka集群的注册地址
+      defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka,http://eureka3:7003/eureka
+  instance:
+    instance-id: demo2-provider-8001
+    prefer-ip-address: true     #访问路径可以显示IP地址

@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  application:
+#  这个应用的名称，用来注册在注册中心的名称
+    name: consul-consumer
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+#      这个就是要注册进consul中的服务名，直接使用了上边定义的微服务名
+        service-name: ${spring.application.name}
+#        取消Consule对当前服务的健康检查
+        register-health-check: false
