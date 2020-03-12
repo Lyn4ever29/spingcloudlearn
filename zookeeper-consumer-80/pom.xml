@@ -45,7 +45,7 @@
             <!--然后又引入这个依赖？-->
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
-            <version>3.4.6</version>
+            <version>3.4.14</version>
         </dependency>
     </dependencies>
 
