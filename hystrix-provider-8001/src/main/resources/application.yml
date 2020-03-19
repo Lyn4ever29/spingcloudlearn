@@ -1,0 +1,17 @@
+server:
+#每个服务提供者对应的端口号肯定要不同
+  port: 8001
+
+spring:
+  application:
+#  这个应用的名称，用来注册在注册中心的名称
+    name: hystrix-provider
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+#       eureka集群的注册地址
+      defaultZone: http://localhost:7000/eureka
+  instance:
+    instance-id: hystrix-provider-8001
+    prefer-ip-address: true     #访问路径可以显示IP地址

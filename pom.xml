@@ -26,6 +26,9 @@
         <module>zookeeper-provider-8001</module>
         <module>consul-comsumer-80</module>
         <module>consul-provider-8001</module>
+        <module>eureka-alone-7000</module>
+        <module>hystrix-consumer-80</module>
+        <module>hystrix-provider-8001</module>
     </modules>
     <packaging>pom</packaging>
 

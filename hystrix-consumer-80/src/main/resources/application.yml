@@ -1,0 +1,21 @@
+server:
+  port: 80
+
+
+#  下边加eureka的配置就是为了能够在eureka注册中心中发现服务提供者
+eureka:
+  client:
+#    register-with-eureka: false
+    service-url:
+#    使用的eureka集群，上一次配置过的
+      defaultZone: http://localhost:7000/eureka/
+      instance:
+        instance-id: hystrix-consumer-80
+        prefer-ip-address: true
+spring:
+  application:
+    name: hystrix-consumer
+
+feign:
+  hystrix:
+    enabled:true
