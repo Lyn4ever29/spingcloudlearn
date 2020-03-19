@@ -1,21 +1,4 @@
-# Hystrix的使用
-
-*  [理论知识](1)
-*  [Hystrix是什么？](1.2)
-  
-  * [服务熔断](1.2.1)
-  
-  *  [服务降级](1.2.2)
-    
-  *  [服务限流](1.2.3)
-  
-*  [码代码](2)
-
-  *  [创建普通的示例项目](2.1)
-
-  *  [在现有的项目中集成Hystrix组件](2.2)
-
-  *  [模拟问题，并使用Hystrix来解决问题](2.2)
+# Hystrix的完全入门指南
 
 <h2 id="1">理论知识</h2>
 
@@ -269,3 +252,11 @@ public class ProviderServiceImpl implements IProviderService {
 ```
 
 > 这些配置可以在[https://github.com/Netflix/Hystrix/wiki/Configuration](https://github.com/Netflix/Hystrix/wiki/Configuration)了解，也可以打开查看HystrixCommandProperties类中的属性(使用idea一搜索就有)，全部都有默认配置
+
+###	服务限流
+
+东西太多，关注我期待后续。
+
+###	项目代码和更多的学习地址
+关注微信公从号“小鱼与Java”，回复“SpringCloud”获取
+![](https://lyn4ever.gitee.io/img/wx/gzh2.png)

@@ -42,6 +42,9 @@
 
 * [使用Feign作为客户端进行服务的访问](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo4-feign-consumer)
 
+####	服务的降级与熔断
+
+*	[Hystrix完全入门指南](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/hystrix-consumer-80)
 
 
 ## 学习方法？
@@ -50,7 +53,11 @@
 
 1. git clone或下载本项目到本地，然后使用IDEA导入要本项目
 
-```git clone https://github.com/Lyn4ever29/spingcloudlearn.git```
+```
+
+git clone https://github.com/Lyn4ever29/spingcloudlearn.git
+
+```
 
 2. 点击上边的每一个链接查看对应的项目页面的README.md文件
 3. 在文档最上边有一个本教程涉及的项目列表。
