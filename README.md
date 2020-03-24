@@ -47,6 +47,11 @@
 *	[Hystrix完全入门指南](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/hystrix-consumer-80)
 
 
+## SpringCloud学习地址
+
+* [SpringCloud学习地址](https://github.com/Lyn4ever29/cloudAlibabaLearn)
+
+
 ## 学习方法？
 
 > ​	这么多的项目，不知道哪个是哪个？不用关键，往下看。
