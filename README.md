@@ -22,8 +22,6 @@
 </dependency>
 ```
 
-关于SpringCloud Alibaba的相关组件学习，请敬请期待！！！
-
 ##### 入门理论
 
 * [首个SpringCloud应用创建及基本原理分析-demo1](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/demo1provider8001)
@@ -46,10 +44,17 @@
 
 *	[Hystrix完全入门指南](https://github.com/Lyn4ever29/spingcloudlearn/tree/master/hystrix-consumer-80)
 
+### 使用Gateway作为路由网关
+> 由于Gateway要使用SpringBoot2.0以上，而本仓库中的Springboot版本是1.5.9,所以我将相关教程移到了SpringCloud Alibaba仓库中
+>
+*  [GateWay入门操作](https://github.com/Lyn4ever29/cloudAlibabaLearn/tree/master/gateway-common-80)
+     
+* [Gateway与SpringSecurity结合](https://github.com/Lyn4ever29/cloudAlibabaLearn/tree/master/gateway-custom-filter-80)
+)
 
-## SpringCloud学习地址
+## SpringCloud Alibaba学习地址
 
-* [SpringCloud学习地址](https://github.com/Lyn4ever29/cloudAlibabaLearn)
+* [SpringCloud Alibaba学习地址](https://github.com/Lyn4ever29/cloudAlibabaLearn)
 
 
 ## 学习方法？
