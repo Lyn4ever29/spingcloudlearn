@@ -12,6 +12,7 @@ public class HelloConsumerController {
     @Autowired
     private ProviderService providerService;
 
+    
     @GetMapping("demo4/consumer/hello/{id}")
     public String hello(@PathVariable("id") Integer id) {
         //直接使用本地的接口就可以访问了

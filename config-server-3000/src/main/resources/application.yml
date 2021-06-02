@@ -1,0 +1,25 @@
+server:
+  port: 3000
+
+spring:
+  application:
+    name:  cloud-config-3000
+  cloud:
+    config:
+      server:
+        git:
+#         GitHub上面的git仓库名字，这个请使用你自己的
+          uri: https://github.com/Lyn4ever29/spingcloudlearn
+#          搜索目录
+#          search-paths:
+#          - spingcloudlearn
+          username: lyn4ever29
+          password: lyn19960429
+#     github上的仓库分支
+      label: master
+eureka:
+  client:
+    service-url:
+#    注册进Eureka中
+      defaultZone: http://localhost:7000/eureka
+
