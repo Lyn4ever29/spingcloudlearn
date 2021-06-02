@@ -15,6 +15,9 @@ public class HelloConsumerController {
     
     @GetMapping("demo4/consumer/hello/{id}")
     public String hello(@PathVariable("id") Integer id) {
+        if(id==null){
+            return "";
+        }
         //直接使用本地的接口就可以访问了
         return providerService.hello(id);
 

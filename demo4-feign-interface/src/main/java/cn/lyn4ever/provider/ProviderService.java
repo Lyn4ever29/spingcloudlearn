@@ -17,5 +17,5 @@ public interface ProviderService {
      * @return
      */
     @GetMapping("demo3/provider/hello/{id}")
-    public String hello(@PathVariable("id") Integer id);
+    String hello(@PathVariable("id") Integer id);
 }
